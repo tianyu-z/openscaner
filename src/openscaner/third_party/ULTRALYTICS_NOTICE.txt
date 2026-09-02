@@ -1,0 +1,20 @@
+Ultralytics YOLO11n-seg
+======================
+
+Upstream authors listed in package metadata: Glenn Jocher and Jing Qiu
+Upstream license: GNU Affero General Public License, version 3
+Upstream source: https://github.com/ultralytics/ultralytics
+Official checkpoint source:
+https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11n-seg.pt
+
+Local modifications: OpenScaner wraps official YOLO11n-seg CPU inference in
+an isolated adapter. It verifies the official checkpoint checksum before the
+pickle-capable loader, requires the exact official 80-class COCO map, accepts
+only the COCO book class, and passes masks to the common quadrilateral
+postprocessor. No Ultralytics source file is copied or modified here.
+
+The verbatim upstream AGPL-3.0 license text, including its Free Software
+Foundation copyright notice, is packaged at
+licenses/AGPL-3.0-Ultralytics.txt. Use of Ultralytics code and trained models
+requires AGPL-3.0 compliance unless covered by an Ultralytics Enterprise
+License.

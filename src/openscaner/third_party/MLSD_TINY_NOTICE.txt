@@ -1,0 +1,15 @@
+M-LSD Tiny attribution
+
+Upstream source: https://github.com/lhwcv/mlsd_pytorch/tree/2312205254e66911703decf775f626995d260f17
+Pinned revision: 2312205254e66911703decf775f626995d260f17
+Upstream files: https://github.com/lhwcv/mlsd_pytorch/blob/2312205254e66911703decf775f626995d260f17/models/mbv2_mlsd_tiny.py and https://github.com/lhwcv/mlsd_pytorch/blob/2312205254e66911703decf775f626995d260f17/utils.py
+License: Apache License, Version 2.0
+
+The vendored Tiny architecture and CPU line decoder are derived from the
+upstream files above. The local checkpoint is the upstream
+models/mlsd_tiny_512_fp32.pth file, SHA-256
+3f2323cfb9faec5a0ef2454c4f68998da21a9f1b7918ce89b85886628b750b94.
+
+Local modifications: focused module boundaries, type annotations, explicit
+CPU-only tensor validation, and removal of the upstream CUDA-only execution
+path. The network topology and output decoding arithmetic are retained.

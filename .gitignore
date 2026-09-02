@@ -1,0 +1,19 @@
+.DS_Store
+__MACOSX/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.superpowers/
+.env
+data/
+
+artifacts/
+fixtures/
+
+# Third-party pretrained weights are downloaded by scripts/download_models.sh.
+models/lcnet100_h_e_bifpn_256_fp32.onnx
+models/mlsd_tiny_512_fp32.pth
+models/mobile_sam.pt
+models/pp_lcnet_x1_0_doc_ori.onnx
+models/yolo11n-seg.pt

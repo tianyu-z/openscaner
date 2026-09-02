@@ -1,0 +1,7 @@
+{
+  "fallback": "docaligner",
+  "maximum_residual_ratio": 0.12,
+  "minimum_confidence": 0.7,
+  "radius_ratio": 0.18,
+  "schema_version": 1
+}

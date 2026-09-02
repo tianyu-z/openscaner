@@ -1,0 +1,18 @@
+services:
+  api:
+    build: .
+    command: uv run uvicorn openscaner.service.api:create_app --factory --host 0.0.0.0 --port 8000
+    env_file: .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models:ro
+
+  worker:
+    build: .
+    command: uv run python -m openscaner.service.worker
+    env_file: .env
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models:ro

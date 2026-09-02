@@ -1,0 +1,29 @@
+PaddlePaddle PP-LCNet_x1_0 document-orientation model
+=====================================================
+
+Upstream license: Apache License 2.0
+Upstream source: https://huggingface.co/PaddlePaddle/PP-LCNet_x1_0_doc_ori_onnx
+Checkpoint source: https://huggingface.co/PaddlePaddle/PP-LCNet_x1_0_doc_ori_onnx/resolve/main/inference.onnx
+Checkpoint SHA-256: af9a0a4f317ff0709ce752067807f819cb15d883f8ecad89f28df1c6ee2d9c92
+Checkpoint size: 6,788,069 bytes
+
+Local modifications: none to the checkpoint. OpenScaner invokes the exact
+upstream ONNX bytes with ONNX Runtime's CPUExecutionProvider. It applies the
+official RGB resize-short-256, center-crop-224, ImageNet normalization, and
+CHW float32 preprocessing. Labels 0, 90, 180, and 270 are used as
+counterclockwise correction angles, matching PaddleX's document preprocessor.
+
+Runtime platform constraints: the current uv.lock resolves ONNX Runtime 1.29.0.
+Its locked macOS wheels have a macOS 14 ARM64 minimum for CPython 3.12 through
+3.14; there is no macOS x86_64 wheel in the current lock. The lock also
+contains manylinux_2_28 ARM64/x86_64 and Windows ARM64/x86_64 wheels for its
+listed Python versions. This is platform-specific wheel coverage, not a claim
+of universal binary availability. Other platforms require a compatible ONNX
+Runtime CPU package outside this locked environment.
+
+OpenScaner's preprocessing safety bound accepts input aspect ratios through
+32:1 and rejects inputs whose resize-short-256 projection exceeds an 8,192
+pixel long edge or 2,097,152 total pixels. The latter caps the projected
+three-channel uint8 resize buffer at 6 MiB while retaining long receipts.
+
+The Apache License 2.0 text is packaged at licenses/Apache-2.0.txt.

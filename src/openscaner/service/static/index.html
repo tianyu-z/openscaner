@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OpenScaner</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>OpenScaner</h1>
+      <div class="auth-bar">
+        <input id="credential" type="password" autocomplete="current-password" placeholder="API key or password">
+        <button id="save-credential" type="button">Save</button>
+      </div>
+    </header>
+    <main class="workspace">
+      <section class="queue-pane" aria-label="Jobs">
+        <form id="upload-form" class="upload-strip">
+          <input id="files" name="images" type="file" accept="image/*" multiple>
+          <button type="submit">Upload</button>
+        </form>
+        <div class="filters" role="tablist" aria-label="Job filters">
+          <button class="filter is-active" type="button" data-filter="active">Active</button>
+          <button class="filter" type="button" data-filter="done">Done</button>
+          <button class="filter" type="button" data-filter="failed">Failed</button>
+          <button class="filter" type="button" data-filter="expired">Expired</button>
+        </div>
+        <div id="job-list" class="job-list"></div>
+      </section>
+      <section class="detail-pane" aria-label="Result">
+        <div id="result-preview" class="result-preview">
+          <div class="empty-state">
+            <h2>No item selected</h2>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

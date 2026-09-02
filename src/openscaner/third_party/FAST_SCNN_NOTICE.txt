@@ -1,0 +1,15 @@
+Fast-SCNN
+=========
+
+Upstream license: Apache License 2.0
+Upstream source: https://github.com/Tramac/Fast-SCNN-pytorch
+Pinned revision: 0638517d359ae1664a27dfb2cd1780a40a06c465
+
+Local modifications: OpenScaner retains Fast-SCNN's learning-to-downsample,
+global feature extractor, pyramid pooling, feature fusion, and depthwise
+classifier topology, changes the classifier to one binary logit, and trains
+the complete network on the shared deterministic generated document dataset.
+The upstream implementation provides no ImageNet initialization.
+
+The verbatim upstream Apache License 2.0 text is packaged at
+licenses/Apache-2.0.txt.

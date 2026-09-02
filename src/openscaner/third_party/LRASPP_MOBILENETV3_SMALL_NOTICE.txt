@@ -1,0 +1,17 @@
+LR-ASPP with MobileNetV3-Small
+==============================
+
+Upstream copyright: Copyright (c) Soumith Chintala 2016
+Upstream license: BSD 3-Clause
+Upstream source: https://github.com/pytorch/vision/tree/v0.28.0
+Checkpoint source: torchvision MobileNet_V3_Small_Weights.IMAGENET1K_V1
+(https://download.pytorch.org/models/mobilenet_v3_small-047dcff4.pth)
+
+Local modifications: OpenScaner combines torchvision's MobileNetV3-Small
+stride-8 and stride-32 feature maps with torchvision's Lite R-ASPP head,
+changes the classifier to one binary logit, and trains the complete network on
+the shared deterministic generated document dataset. The exported checkpoint
+contains the best local validation state.
+
+The verbatim upstream BSD 3-Clause license is packaged at
+licenses/BSD-3-Clause-Torchvision.txt.

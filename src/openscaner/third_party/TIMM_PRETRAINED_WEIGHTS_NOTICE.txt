@@ -1,0 +1,30 @@
+timm ImageNet Pretrained Weights
+===============================
+
+Upstream copyright: Ross Wightman and timm contributors
+Upstream license: Apache License 2.0
+Upstream source: https://github.com/huggingface/pytorch-image-models
+
+Pinned pretrained weights:
+- MobileNetV3-Small: timm/mobilenetv3_small_100.lamb_in1k,
+  revision 1824797e7887cbec1990e4adbd6675960a36c589, model.safetensors
+- PP-LCNet-0.5: timm/lcnet_050.ra2_in1k,
+  revision 7d724d70bd001f453d812e733aa9b1931a69f6c2, model.safetensors
+
+Local modifications for future training: OpenScaner downloads each immutable
+Hugging Face snapshot, resolves the expected cache indirection, and opens the
+resolved object with no-follow protection. It reads the object once into a
+single byte buffer, verifies the exact size and SHA-256 of those bytes,
+deserializes those verified bytes in memory with safetensors, and passes the
+resulting state_dict directly to timm. The temporary state_dict is removed from
+timm's model configuration after the parameters are loaded.
+
+Historical provenance: the frozen MobileNetV3-Small corner checkpoint was
+trained earlier via timm's default resolver. Its surviving Hugging Face cache
+was attested only after training; the newer training-time pinned-byte loader was
+not active for that run. The structured report fields are authoritative:
+verification_evidence is post_hoc_cache_attestation, training_time_pin_enforced
+is false, and training_loader is timm default resolver. This notice does not
+imply training-time pin enforcement for that checkpoint.
+
+The Apache License 2.0 text is packaged at licenses/Apache-2.0.txt.

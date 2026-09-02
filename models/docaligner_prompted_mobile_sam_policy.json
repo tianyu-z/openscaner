@@ -1,0 +1,15 @@
+{
+  "crop_margin_ratio": 0.05,
+  "fallback": "docaligner",
+  "foreground_scale": 0.55,
+  "include_background": false,
+  "minimum_sam_score": 0.7,
+  "schema_version": 1,
+  "weights": {
+    "coarse_agreement": 0.15,
+    "edge_support": 0.25,
+    "geometric_stability": 0.1,
+    "mask_stability": 0.15,
+    "predicted_iou": 0.35
+  }
+}

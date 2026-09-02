@@ -1,0 +1,13 @@
+{
+  "fallback": "docaligner",
+  "maximum_candidates": 64,
+  "maximum_corner_displacement_ratio": 0.04,
+  "minimum_score": 0.3,
+  "schema_version": 1,
+  "weights": {
+    "coarse_agreement": 1.0,
+    "corner_response": 0.0,
+    "edge_support": 0.0,
+    "mask_agreement": 0.0
+  }
+}

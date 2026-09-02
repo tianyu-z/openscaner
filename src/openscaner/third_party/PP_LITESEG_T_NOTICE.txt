@@ -1,0 +1,17 @@
+PP-LiteSeg-T with STDC1
+======================
+
+Upstream license: Apache License 2.0
+Upstream source: https://github.com/PaddlePaddle/PaddleSeg
+Pinned revision: 3c4db66de1d9d59d0628ed87590b6308a2f4aa2a
+
+Local modifications: OpenScaner ports the official PP-LiteSeg-T topology to
+PyTorch: the STDC1 [2, 2, 2] backbone, sum-fused PPContextModule, spatial UAFM
+decoder, and official T-channel widths. It changes the segmentation head to
+one binary logit and trains on the shared deterministic generated dataset.
+The official PP_STDCNet1 ImageNet parameters are checksum-verified and mapped
+deterministically from Paddle parameter names into the equivalent PyTorch
+backbone before training.
+
+The verbatim upstream Apache License 2.0 text is packaged at
+licenses/Apache-2.0.txt.

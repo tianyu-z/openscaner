@@ -1,0 +1,2 @@
+"""CPU document-boundary benchmark."""
+

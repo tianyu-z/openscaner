@@ -1,0 +1,16 @@
+OSS Document Scanner contour detector
+=====================================
+
+Upstream copyright: Copyright (c) 2022 Martin Guillon
+Upstream license: MIT
+Upstream source: https://github.com/ossappscollective/OSS-DocumentScanner
+Pinned revision: 444bd810e77c571d66d2eecb3e13371e722ee538
+
+Local modifications: OpenScaner translated the checked TypeScript/OpenCV
+document-contour pipeline and its application defaults into the isolated
+Python CPU adapter in openscaner.adapters.oss_contour. The port adds only
+structured diagnostics and the common adapter result contract around that
+algorithm.
+
+The verbatim upstream MIT license, including its copyright and warranty
+text, is packaged at licenses/MIT-OSS-DocumentScanner.txt.

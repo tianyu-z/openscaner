@@ -1,0 +1,25 @@
+SmartDoc 2015 - Challenge 1 Dataset
+Version: 2.0.0
+
+Dataset source: http://smartdoc.univ-lr.fr/
+Upstream source: https://github.com/jchazalon/smartdoc15-ch1-pywrapper
+
+Local modifications: None. OpenScaner uses the pinned dataset as training and
+validation input without redistributing or modifying the source archive.
+
+The dataset contains smartphone video frames and quadrilateral ground truth
+created for the SmartDoc 2015 Challenge 1 competition. Please cite:
+
+Jean-Christophe Burie, Joseph Chazalon, Mickael Coustaty, Sebastien Eskenazi,
+Muhammad Muzzamil Luqman, Maroua Mehri, Nibal Nayef, Jean-Marc Ogier,
+Sophea Prum, and Marcal Rusinol. "ICDAR2015 Competition on Smartphone
+Document Capture and OCR (SmartDoc)." 13th International Conference on
+Document Analysis and Recognition (ICDAR), 2015.
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+License URL: http://creativecommons.org/licenses/by/4.0/
+
+The pinned SmartDoc 2015 v2.0.0 archive used by this project has SHA-256:
+3acb8be143fc86c507d90d298097cba762e91a3abf7e2d35ccd5303e13a79eae
+
+Original document images remain the property of their respective authors.

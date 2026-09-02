@@ -1,0 +1,17 @@
+DocAligner LCNet100 heatmap model and adapted postprocess
+========================================================
+
+Upstream license: Apache License 2.0
+Upstream source: https://github.com/DocsaidLab/DocAligner
+Pinned revision: 3275b0f07f8e99d8c01cb0774dea2549be1416b6
+Checkpoint source: Google Drive file 1IlbLPkCv-TdaBLOPh_4J97P1_KHYYJ7a
+
+Local modifications: OpenScaner invokes the pinned ONNX checkpoint directly
+with ONNX Runtime's CPUExecutionProvider. The preprocessing and adapted
+postprocess preserve upstream BGR CHW /255 input, 0.3 heatmap cutoff, uint8
+conversion, Otsu binarization, and largest-polygon centroid semantics while
+adding model-integrity, output-schema, provider, and quadrilateral validation.
+
+The upstream repository provides the standard Apache License 2.0 text and no
+separate copyright line. Its verbatim license text is packaged at
+licenses/Apache-2.0.txt.

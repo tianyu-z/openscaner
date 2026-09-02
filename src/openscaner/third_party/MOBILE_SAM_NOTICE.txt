@@ -1,0 +1,16 @@
+MobileSAM automatic mask generator
+==================================
+
+Upstream copyright notice retained by the project:
+Copyright (c) Meta Platforms, Inc. and affiliates. All rights reserved.
+Upstream license: Apache License 2.0
+Upstream source: https://github.com/ChaoningZhang/MobileSAM
+Pinned revision: f706ad9c4eb7f219c00d9050e46328518ffb65d2
+
+Local modifications: OpenScaner uses MobileSAM only through automatic mask
+generation on CPU, with a bounded input dimension and point batch, then ranks
+the generated masks using fixed geometry, border-support, paper-likelihood,
+and generator-quality weights before common quadrilateral postprocessing.
+
+The verbatim upstream Apache License 2.0 text is packaged at
+licenses/Apache-2.0.txt.
